@@ -1,0 +1,22 @@
+{
+  "name": "hisam-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Hisam Uddin - Senior Frontend Developer & Digital Solutions Specialist",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/style.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "developer",
+    "tailwind"
+  ],
+  "author": "Hisam Uddin",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
