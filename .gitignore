@@ -1,0 +1,8 @@
+# IDE & OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Archives & Temporary files
+*.zip
+stitch_extracted/
