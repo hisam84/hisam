@@ -3,22 +3,22 @@ import { useEffect, useState } from "react";
 const projects = [
   {
     number: "01",
-    title: "ShopEase",
-    category: "React",
+    title: "ShopEase API & Storefront",
+    category: "Laravel",
     label: "E-Commerce",
     description:
-      "A fast, full-featured storefront with live product filters, cart management, and a frictionless checkout flow.",
-    stack: ["React", "Tailwind", "REST API"],
+      "A scalable full-stack e-commerce engine with Laravel RESTful API, MySQL database, React frontend, and Stripe payments.",
+    stack: ["Laravel", "MySQL", "React", "Tailwind"],
     tone: "cobalt",
   },
   {
     number: "02",
-    title: "DataViz",
-    category: "React",
+    title: "DataViz SaaS Platform",
+    category: "Laravel",
     label: "Analytics",
     description:
-      "A responsive analytics dashboard with live metrics, data visualization, and role-based interface states.",
-    stack: ["React", "Chart.js", "REST API"],
+      "A high-performance SaaS analytics dashboard built with Laravel and Inertia.js featuring live data visualization and RBAC.",
+    stack: ["Laravel", "Inertia.js", "React", "REST API"],
     tone: "lime",
   },
   {
@@ -43,12 +43,12 @@ const projects = [
   },
   {
     number: "05",
-    title: "LaunchKit",
-    category: "React",
+    title: "LaunchKit SaaS Portal",
+    category: "Laravel",
     label: "SaaS",
     description:
-      "A polished product launch page with pricing, social proof, and purposeful motion that guides conversion.",
-    stack: ["React", "CSS Modules", "Motion"],
+      "A developer tooling subscription portal powered by Laravel Sanctum authentication, queue workers, and clean billing.",
+    stack: ["Laravel", "PHP", "React", "REST API"],
     tone: "sky",
   },
   {
@@ -64,16 +64,16 @@ const projects = [
 ];
 
 const services = [
-  ["01", "Web design", "Clear, responsive interfaces shaped around your brand and business goals."],
-  ["02", "Frontend development", "Performant React experiences with thoughtful motion and maintainable code."],
-  ["03", "WordPress & Elementor", "Flexible marketing and commerce sites your team can confidently manage."],
-  ["04", "SEO & performance", "Technical improvements that make your site faster, clearer, and easier to find."],
+  ["01", "Laravel & Full-Stack Development", "Architecting robust PHP/Laravel backends, scalable RESTful APIs, and secure database systems."],
+  ["02", "Frontend & React Applications", "Performant web experiences with thoughtful motion, modern state management, and maintainable code."],
+  ["03", "WordPress & CMS Solutions", "Flexible marketing and commerce sites shaped around custom themes and effortless client editing."],
+  ["04", "Technical SEO & Performance", "Technical optimizations ensuring sub-second response times, Core Web Vitals compliance, and high SERP ranking."],
 ];
 
 const experience = [
-  ["2023 — Now", "Senior Freelance Frontend Developer", "International clients & freelance platforms"],
-  ["2022 — 2023", "WordPress & Elementor Specialist", "Fiverr & Upwork"],
-  ["2021 — 2022", "UI/UX Designer & Frontend Developer", "Local agency partner, Dhaka"],
+  ["2023 — Now", "Full-Stack Laravel & Frontend Developer", "International clients & freelance engineering contracts"],
+  ["2022 — 2023", "Laravel & WordPress Specialist", "Fiverr & Upwork Top-Rated projects"],
+  ["2021 — 2022", "PHP & Frontend Web Developer", "Local agency partner, Dhaka"],
 ];
 
 function ArrowIcon({ diagonal = false }: { diagonal?: boolean }) {
@@ -156,37 +156,37 @@ export default function App() {
       <section className="hero" id="top">
         <div className="hero-kicker hero-enter">
           <span className="availability-dot" />
-          Available for select freelance projects
+          Hisam Uddin · Laravel &amp; Frontend Developer
         </div>
         <h1 className="hero-title hero-enter">
-          I build digital
-          <span>experiences that</span>
-          <em>work beautifully.</em>
+          Hi, I&apos;m Hisam Uddin.
+          <span>Laravel full-stack &amp;</span>
+          <em>modern web developer.</em>
         </h1>
         <div className="hero-footer hero-enter">
           <p>
-            Frontend developer and digital solutions specialist based in Dhaka,
-            crafting fast, thoughtful web experiences for brands worldwide.
+            Full-stack Laravel and frontend developer based in Dhaka,
+            crafting robust backends, scalable REST APIs, and fast, intuitive web applications for clients worldwide.
           </p>
           <a className="circle-link" href="#work" aria-label="Explore selected work">
             <ArrowIcon />
           </a>
         </div>
         <div className="hero-orbit" aria-hidden="true">
-          <span>React · WordPress · UI/UX · Performance · </span>
+          <span>Laravel · PHP · MySQL · REST APIs · React · Performance · </span>
         </div>
       </section>
 
       <section className="marquee" aria-label="Capabilities">
         <div className="marquee-track">
-          <span>React development</span><i>✦</i>
-          <span>Web design</span><i>✦</i>
-          <span>WordPress</span><i>✦</i>
-          <span>Digital solutions</span><i>✦</i>
-          <span>React development</span><i>✦</i>
-          <span>Web design</span><i>✦</i>
-          <span>WordPress</span><i>✦</i>
-          <span>Digital solutions</span><i>✦</i>
+          <span>Laravel development</span><i>✦</i>
+          <span>Full-stack apps</span><i>✦</i>
+          <span>REST APIs</span><i>✦</i>
+          <span>React &amp; Inertia</span><i>✦</i>
+          <span>Laravel development</span><i>✦</i>
+          <span>Full-stack apps</span><i>✦</i>
+          <span>REST APIs</span><i>✦</i>
+          <span>React &amp; Inertia</span><i>✦</i>
         </div>
       </section>
 
@@ -197,7 +197,7 @@ export default function App() {
           <p>A selection of digital products, websites, and interfaces created for ambitious businesses.</p>
         </div>
         <div className="filters reveal" aria-label="Filter projects">
-          {["All", "React", "Web Design", "WordPress"].map((item) => (
+          {["All", "Laravel", "React", "Web Design", "WordPress"].map((item) => (
             <button
               className={filter === item ? "is-active" : ""}
               key={item}
@@ -264,12 +264,26 @@ export default function App() {
 
       <section className="about-section" id="about">
         <div className="about-top">
-          <SectionLabel>About me</SectionLabel>
+          <div className="about-intro-col">
+            <SectionLabel>About me</SectionLabel>
+            <div className="about-portrait-wrap reveal">
+              <picture>
+                <source srcSet="/hisam-portrait.webp" type="image/webp" />
+                <img
+                  src="/Hisam.png"
+                  alt="Hisam Uddin — Laravel &amp; Frontend Developer"
+                  className="about-portrait"
+                  width="240"
+                  height="290"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
+          </div>
           <div className="about-statement reveal">
             <p>
-              I&apos;m Hisam, a frontend developer who combines clean code with
-              thoughtful UI/UX to create digital products that feel simple,
-              responsive, and genuinely useful.
+              I&apos;m Hisam Uddin, a full-stack developer specializing in Laravel, PHP, and modern frontend architecture. I build secure backends, clean APIs, and responsive interfaces that deliver fast, reliable, and production-grade digital products.
             </p>
           </div>
         </div>
