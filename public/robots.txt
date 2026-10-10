@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hisam.beepsystems.com.bd/sitemap.xml
