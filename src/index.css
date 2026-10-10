@@ -641,6 +641,58 @@ svg {
   font-weight: 500;
 }
 
+.faq-section {
+  padding: 7rem 7vw;
+  border-top: 1px solid #d1cec5;
+}
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 6vw;
+  margin-top: 2.5rem;
+}
+
+.faq-intro h2 {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin: 0 0 1.5rem;
+}
+
+.faq-intro p {
+  color: #74726a;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-top: 1px solid #d1cec5;
+  padding: 1.5rem 0;
+}
+
+.faq-item h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #74726a;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
 footer {
   background: #191916;
   color: #f1efe9;
@@ -932,11 +984,11 @@ footer {
 
   .hero-orbit { display: none; }
 
-  .work-section, .services-section, .about-section {
+  .work-section, .services-section, .about-section, .faq-section {
     padding: 6rem 5vw;
   }
 
-  .section-heading, .services-layout, .about-top {
+  .section-heading, .services-layout, .about-top, .faq-layout {
     grid-template-columns: 1fr;
   }
 

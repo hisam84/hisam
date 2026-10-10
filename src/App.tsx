@@ -193,8 +193,8 @@ export default function App() {
       <section className="work-section" id="work">
         <SectionLabel>Selected work</SectionLabel>
         <div className="section-heading reveal">
-          <h2>Projects built to make an impact.</h2>
-          <p>A selection of digital products, websites, and interfaces created for ambitious businesses.</p>
+          <h2>Featured Full-Stack Laravel &amp; Web Applications</h2>
+          <p>Production web products, custom APIs, and responsive interfaces created for ambitious businesses.</p>
         </div>
         <div className="filters reveal" aria-label="Filter projects">
           {["All", "Laravel", "React", "Web Design", "WordPress"].map((item) => (
@@ -240,13 +240,12 @@ export default function App() {
       </section>
 
       <section className="services-section" id="services">
-        <SectionLabel>How I can help</SectionLabel>
+        <SectionLabel>Core capabilities</SectionLabel>
         <div className="services-layout">
           <div className="services-intro reveal">
-            <h2>From first idea to final pixel.</h2>
+            <h2>Core Development Services &amp; Technical Capabilities</h2>
             <p>
-              Practical digital solutions, built with care and focused on measurable
-              business outcomes.
+              Scalable full-stack solutions built with Laravel and React, focused on measurable performance and business outcomes.
             </p>
           </div>
           <div className="service-list">
@@ -302,6 +301,36 @@ export default function App() {
               <p>{company}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="faq-section" id="faq">
+        <SectionLabel>FAQ &amp; Value</SectionLabel>
+        <div className="faq-layout">
+          <div className="faq-intro reveal">
+            <h2>Why hire a full-stack Laravel developer?</h2>
+            <p>
+              A full-stack Laravel developer engineers complete web applications by building secure server-side architecture, relational database schemas, and RESTful APIs with PHP/Laravel, while simultaneously crafting responsive user interfaces with modern React.
+            </p>
+          </div>
+          <div className="faq-list">
+            <article className="faq-item reveal">
+              <h3>Unified Full-Stack Architecture</h3>
+              <p>Seamlessly connects robust Laravel 11 backend logic, Eloquent ORM, and REST APIs with reactive React components.</p>
+            </article>
+            <article className="faq-item reveal">
+              <h3>Enterprise Security Out of the Box</h3>
+              <p>Built-in protection against CSRF, SQL injections, and unauthorized data exposure with Laravel Sanctum and Policies.</p>
+            </article>
+            <article className="faq-item reveal">
+              <h3>Faster Time-to-Market</h3>
+              <p>Turnkey authentication, queue workers, and database migrations accelerate MVP to production deployment.</p>
+            </article>
+            <article className="faq-item reveal">
+              <h3>Cost-Efficient Full-Lifecycle Delivery</h3>
+              <p>A single full-stack engineer manages server deployment, API design, and client-side UI without handoff friction.</p>
+            </article>
+          </div>
         </div>
       </section>
 
