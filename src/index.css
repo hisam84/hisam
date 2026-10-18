@@ -443,6 +443,16 @@ svg {
   line-height: 1.55;
 }
 
+.project-highlights {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.9rem 0 0;
+  padding-left: 1rem;
+  color: #73716a;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
 .project-arrow {
   display: grid;
   width: 2.5rem;
@@ -537,8 +547,9 @@ svg {
 }
 
 .about-portrait-wrap {
+  width: clamp(15rem, 32vw, 26.25rem);
   margin-top: 2rem;
-  max-width: 240px;
+  max-width: 100%;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #d1cec5;
@@ -550,9 +561,9 @@ svg {
 .about-portrait {
   width: 100%;
   height: auto;
-  aspect-ratio: 928 / 1120;
+  aspect-ratio: 1024 / 434;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), filter 350ms ease;
   filter: grayscale(15%);
 }

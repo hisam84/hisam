@@ -3,65 +3,125 @@ import { useEffect, useState } from "react";
 const projects = [
   {
     number: "01",
-    title: "ShopEase API & Storefront",
-    category: "Laravel",
-    label: "E-Commerce",
+    title: "Task Management System",
+    category: "SaaS",
+    label: "In development",
     description:
-      "A scalable full-stack e-commerce engine with Laravel RESTful API, MySQL database, React frontend, and Stripe payments.",
-    stack: ["Laravel", "MySQL", "React", "Tailwind"],
+      "A multi-tenant workspace for companies to organize departments, employees, and tasks with role-based access.",
+    highlights: ["Role-based dashboards", "Task assignment and reporting", "Company and department administration"],
+    stack: ["Next.js", "PostgreSQL", "Neon", "Vercel"],
     tone: "cobalt",
   },
   {
     number: "02",
-    title: "DataViz SaaS Platform",
-    category: "Laravel",
-    label: "Analytics",
+    title: "Serial Pro — Clinic Management",
+    category: "Healthcare",
+    label: "Planned / in development",
     description:
-      "A high-performance SaaS analytics dashboard built with Laravel and Inertia.js featuring live data visualization and RBAC.",
-    stack: ["Laravel", "Inertia.js", "React", "REST API"],
-    tone: "lime",
-  },
-  {
-    number: "03",
-    title: "AgencyPro",
-    category: "Web Design",
-    label: "Business",
-    description:
-      "A conversion-focused agency site with fluid interactions, client stories, and a considered contact experience.",
-    stack: ["Figma", "JavaScript", "CSS"],
-    tone: "coral",
-  },
-  {
-    number: "04",
-    title: "HealthCare Pro",
-    category: "WordPress",
-    label: "Healthcare",
-    description:
-      "An accessible medical platform with appointment booking, department pages, and clear emergency pathways.",
-    stack: ["WordPress", "Elementor", "PHP"],
-    tone: "violet",
-  },
-  {
-    number: "05",
-    title: "LaunchKit SaaS Portal",
-    category: "Laravel",
-    label: "SaaS",
-    description:
-      "A developer tooling subscription portal powered by Laravel Sanctum authentication, queue workers, and clean billing.",
-    stack: ["Laravel", "PHP", "React", "REST API"],
+      "A mobile-focused clinic app for patient serials and doctor appointments, with separate flows for new and returning patients.",
+    highlights: ["Appointment scheduling and cancellation", "Date-based patient records", "Patient reports"],
+    stack: ["Next.js", "PostgreSQL", "Neon", "Vercel"],
     tone: "sky",
   },
   {
-    number: "06",
-    title: "TasteBD",
-    category: "Web Design",
-    label: "Restaurant",
+    number: "03",
+    title: "Krishi Uddekta",
+    category: "E-commerce",
+    label: "Ongoing improvements",
     description:
-      "A welcoming restaurant experience with an interactive menu, reservations, and mobile-first browsing.",
-    stack: ["HTML", "JavaScript", "PHP"],
+      "An agricultural e-commerce project connecting customers with products, seeds, and seedlings.",
+    highlights: ["Regional delivery charge configuration", "Product-focused shopping experience", "Performance and SEO improvements"],
+    stack: ["Next.js", "GitHub", "Vercel"],
+    tone: "lime",
+  },
+  {
+    number: "04",
+    title: "Mess Meal Tracker",
+    category: "Productivity",
+    label: "Prototype / development",
+    description:
+      "A shared-household meal and expense tracker for keeping monthly mess accounts organized.",
+    highlights: ["Member and meal tracking", "Expense and payment management", "Monthly summaries and reports"],
+    stack: ["HTML", "CSS", "JavaScript"],
     tone: "amber",
   },
+  {
+    number: "05",
+    title: "Education Management & Website Issue Tracker",
+    category: "Business",
+    label: "Concept / ongoing work",
+    description:
+      "A concept for tracking website issues and development tasks alongside educational institution website and management work.",
+    highlights: ["Website issue tracking", "Development task organization", "Education website and management solutions"],
+    stack: ["Web technologies", "WordPress"],
+    tone: "coral",
+  },
+  {
+    number: "06",
+    title: "Domain Expiry Tracker",
+    category: "Productivity",
+    label: "Workflow",
+    description:
+      "A domain management workflow for organizing records and monitoring expiration dates across a large portfolio.",
+    highlights: ["Centralized domain records", "Expiration date monitoring"],
+    stack: ["Google Sheets", "Google Apps Script"],
+    tone: "violet",
+  },
+  {
+    number: "07",
+    title: "E-commerce & Business Solutions",
+    category: "E-commerce",
+    label: "Ongoing client work",
+    description:
+      "E-commerce planning and website improvements focused on product management, checkout, orders, and delivery.",
+    highlights: ["Checkout and product improvements", "Order handling", "Delivery tracking integrations"],
+    stack: ["WordPress", "WooCommerce"],
+    tone: "amber",
+  },
+  {
+    number: "08",
+    title: "Developer Portfolio",
+    category: "Portfolio",
+    label: "In development",
+    description:
+      "A clean, minimal, responsive portfolio for presenting technical work and development services.",
+    highlights: ["Responsive project showcase", "Focused personal branding"],
+    stack: ["Next.js", "Vercel"],
+    tone: "sky",
+  },
+  {
+    number: "09",
+    title: "Scientific Calculator",
+    category: "Experiments",
+    label: "Experiment",
+    description: "A scientific calculator interface inspired by the FX-991EX.",
+    highlights: ["Scientific calculator interface"],
+    stack: ["Web technologies"],
+    tone: "cobalt",
+  },
+  {
+    number: "10",
+    title: "Bangla Typing Tester",
+    category: "Experiments",
+    label: "Experiment",
+    description: "A Bengali typing practice and speed-testing concept.",
+    highlights: ["Bengali typing practice", "Typing speed testing"],
+    stack: ["Web technologies"],
+    tone: "lime",
+  },
+  {
+    number: "11",
+    title: "Blood Donor Admin Panel",
+    category: "Experiments",
+    label: "Proposed concept",
+    description: "A proposed donor photo management interface for a community foundation.",
+    highlights: ["Donor photo management"],
+    stack: ["Web technologies"],
+    tone: "coral",
+  },
 ];
+
+const projectCategories = ["All", ...new Set(projects.map((project) => project.category))];
 
 const services = [
   ["01", "Laravel & Full-Stack Development", "Architecting robust PHP/Laravel backends, scalable RESTful APIs, and secure database systems."],
@@ -193,11 +253,11 @@ export default function App() {
       <section className="work-section" id="work">
         <SectionLabel>Selected work</SectionLabel>
         <div className="section-heading reveal">
-          <h2>Featured Full-Stack Laravel &amp; Web Applications</h2>
-          <p>Production web products, custom APIs, and responsive interfaces created for ambitious businesses.</p>
+          <h2>Real projects, ideas &amp; experiments</h2>
+          <p>A selection of business tools, e-commerce work, and product ideas I&apos;ve built or am developing.</p>
         </div>
         <div className="filters reveal" aria-label="Filter projects">
-          {["All", "Laravel", "React", "Web Design", "WordPress"].map((item) => (
+          {projectCategories.map((item) => (
             <button
               className={filter === item ? "is-active" : ""}
               key={item}
@@ -213,7 +273,7 @@ export default function App() {
             <article className="project-card reveal" key={project.title}>
               <div className={`project-visual ${project.tone}`}>
                 <span>{project.label}</span>
-                <div className="project-window">
+                <div className="project-window" aria-hidden="true">
                   <div className="window-bar"><i /><i /><i /></div>
                   <div className="window-content">
                     <b>{project.title}</b>
@@ -228,8 +288,11 @@ export default function App() {
                 <div>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
+                  <ul className="project-highlights">
+                    {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                  </ul>
                 </div>
-                <span className="project-arrow"><ArrowIcon diagonal /></span>
+                <span className="project-arrow" aria-hidden="true"><ArrowIcon diagonal /></span>
               </div>
               <div className="project-stack">
                 {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
@@ -267,9 +330,8 @@ export default function App() {
             <SectionLabel>About me</SectionLabel>
             <div className="about-portrait-wrap reveal">
               <picture>
-                <source srcSet="/hisam-portrait.webp" type="image/webp" />
                 <img
-                  src="/Hisam.png"
+                  src="/hisam-profile.webp"
                   alt="Hisam Uddin — Laravel &amp; Frontend Developer"
                   className="about-portrait"
                   width="240"
