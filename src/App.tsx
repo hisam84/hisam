@@ -331,7 +331,7 @@ export default function App() {
             <div className="about-portrait-wrap reveal">
               <picture>
                 <img
-                  src="/hisam-profile.webp"
+                  src="/hisam-profile.webp?v=2"
                   alt="Hisam Uddin — Laravel &amp; Frontend Developer"
                   className="about-portrait"
                   width="240"
